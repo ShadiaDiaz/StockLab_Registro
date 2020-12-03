@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "S5hxRxPmlrXuNILb65AxeyNobOOe21EFh+T4Kd40oDii6incWVq9SzWYQASiyAKPyZ/7btx/OY/x7LoICQyZCQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xshad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\xshad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\xshad\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

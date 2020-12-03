@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "q2Z5J6TgkFR5csq4MNSMg9nXfhe5nxuJM8xph9ZWPdblkZ/WaMa/n7uvqEsfNnJJdVJtiKJ4xUIj/rCNFYj95w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Logica\\Logica.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xshad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\xshad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
