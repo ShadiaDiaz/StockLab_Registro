@@ -22,10 +22,10 @@ namespace Logica
         {
             try
             {
-                var buscardocente = _context.docente.Find(docente.Identificacion);
+                var buscardocente = _context.Docente.Find(docente.Identificacion);
                 if (buscardocente == null)
                 {
-                    _context.docente.Add(docente);
+                    _context.Docente.Add(docente);
                     _context.SaveChanges();
                     return new GuardardocenteResponse(docente);
                 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qmT25Df98L7ivAL4O0UWbyQZ5KKWS1q/oyQlVcn1BtgDuM31OuDjG65ln5B9HQVGrcMcyjHjqA4IDplxz5D2BQ==",
+  "dgSpecHash": "jzQZwuzpYHToYBxLTkj7MNvfZ/XpO8ccdJwGbx0VQvFwPSty+eXjWE2N6JWUsWbEQfdgWz+FAqlERLvDWYAmyg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xshad\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\xshad\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S5hxRxPmlrXuNILb65AxeyNobOOe21EFh+T4Kd40oDii6incWVq9SzWYQASiyAKPyZ/7btx/OY/x7LoICQyZCQ==",
+  "dgSpecHash": "dWtv6mF5EYzsp/l8EZZeswht0uM6p01w6BavwlSSOHzEffVl63yARmcBY117bThGq1/7dSnL67IiC1f2kc3ZJw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj",
+  "projectFilePath": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xshad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\xshad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

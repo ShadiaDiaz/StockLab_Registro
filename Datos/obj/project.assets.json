@@ -6153,11 +6153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\Datos.csproj",
+      "projectUniqueName": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\Datos.csproj",
+      "projectPath": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\xshad\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\obj\\",
+      "outputPath": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6176,8 +6176,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj": {
-              "projectPath": "c:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj"
+            "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\xshad\\Desktop\\StockLab_Registro\\Entity\\Entity.csproj"
             }
           }
         }
