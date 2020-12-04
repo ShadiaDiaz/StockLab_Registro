@@ -1,16 +1,72 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entity
 {
     public class Docente
     {
-         
-         public string Identificacion { get; set; }
-         public string Nombres { get; set; }  
-         public int Edad { get; set; }
-          public string Sexo { get; set; }
-         public string Correo { get; set; }
-         public string Contraseña { get; set; }
-       
+        [Key]
+        [Column(TypeName = "varchar(13)")]
+        [Required(ErrorMessage = "Proporcione la identificacion")]
+        [StringLength(13, ErrorMessage = "La identificacion es muy larga")]
+        public string Identificacion { get; set; }
+        [Column(TypeName = "varchar(25)")]
+        [Required(ErrorMessage = "Proporcione un nombre")]
+        [StringLength(25, ErrorMessage = "El nombre es muy largo")]
+        public string Nombres { get; set; }
+        [Column(TypeName = "varchar(25)")]
+        [Required(ErrorMessage = "Proporcione un apellido")]
+        [StringLength(25, ErrorMessage = "El apellido es muy largo")]
+        public string Apellidos { get; set; }
+        
+        [Column(TypeName = "int")]
+        [Required(ErrorMessage = "Proporcione una edad")]
+        [EdadValidacion(ErrorMessage = "Error en la edad")]
+        public int Edad { get; set; }
+        [Column(TypeName = "varchar(11)")]
+        [SexoValidacion(ErrorMessage = "El sexo es invalido")]
+        [StringLength(11, ErrorMessage = "El sexo es demasiado largo")]
+        public string Sexo { get; set; }
+        [Column(TypeName = "varchar(30)")]
+        [DataType(DataType.EmailAddress,ErrorMessage = "Debe ser un email valido")]
+        public string Correo { get; set; }
+        [Column(TypeName = "varchar(15)")]
+        public string Password { get; set; }
+        [Column(TypeName = "varchar(8)")]
+        public string Estado { get; set; }
+        [Column(TypeName = "varchar(15)")]
+        public string Tipo { get; set; }
+
+
+        public class SexoValidacion : ValidationAttribute
+        {
+            protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+            {
+                if ((value.ToString().ToLower() == "masculino") || (value.ToString().ToLower() == "femenino"))
+                {
+                    return ValidationResult.Success;
+                }
+                else
+                {
+                    return new ValidationResult(ErrorMessage);
+                }
+            }
+        }
+
+        public class EdadValidacion : ValidationAttribute
+        {
+            protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+            {
+                if (((int.Parse(value.ToString()) > 18) || (int.Parse(value.ToString()) < 100)))
+                {
+                    return ValidationResult.Success;
+                }
+                else
+                {
+                    return new ValidationResult(ErrorMessage);
+                }
+            }
+        }
     }
 }

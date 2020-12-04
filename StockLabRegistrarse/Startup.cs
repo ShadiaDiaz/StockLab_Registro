@@ -1,10 +1,14 @@
+using System;
+using Datos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace StockLabRegistrarse
 {
@@ -21,8 +25,8 @@ namespace StockLabRegistrarse
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<DocenteContext>(p => p.UseSqlServer(connectionString));
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            services.AddDbContext<DocenteContext>(Context => Context.UseSqlServer(connectionString));
             //Agregar OpenApi Swagger
             services.AddSwaggerGen(c =>
             {
@@ -83,6 +87,13 @@ namespace StockLabRegistrarse
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
 
             app.UseSpa(spa =>
             {

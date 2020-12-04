@@ -9,11 +9,11 @@ namespace StockLabRegistrarse.Controllers
     using Datos;
     using StockLabRegistrarse.Models;
     using Microsoft.AspNetCore.Http;
-     
+
 
     [Route("api/[controller]")]
     [ApiController]
-    public class DocenteController:ControllerBase
+    public class DocenteController : ControllerBase
     {
         private readonly DocenteService service;
         public DocenteController(DocenteContext context)
@@ -26,7 +26,7 @@ namespace StockLabRegistrarse.Controllers
         {
             Docente docente = MapearDocente(docenteInput);
             var response = service.GuardarDocente(docente);
-          if (response.Error)
+            if (response.Error)
             {
                 ModelState.AddModelError("Error al registrar Docente", response.Mensaje);
                 var detallesproblemas = new ValidationProblemDetails(ModelState);
@@ -37,16 +37,17 @@ namespace StockLabRegistrarse.Controllers
             return Ok(response.Docente);
         }
 
-         private Docente MapearDocente(DocenteInputModels docenteInput)
+        private Docente MapearDocente(DocenteInputModels docenteInput)
         {
             var docente = new Docente
-            { 
-                 Identificacion = docente.Identificacion,
-            Nombres = docente.Nombres,
-            Edad = docente.Edad,
-             Sexo = docente.Sexo,
-            Correo = docente.Correo,
-            Contraseña = docente.Contraseña,
+            {
+                Identificacion = docenteInput.Identificacion,
+                Nombres = docenteInput.Nombres,
+                Apellidos = docenteInput.Apellidos,
+                Edad = docenteInput.Edad,
+                Sexo = docenteInput.Sexo,
+                Correo = docenteInput.Correo,
+                Password = docenteInput.Password,
             };
             return docente;
         }

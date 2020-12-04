@@ -25,18 +25,20 @@ namespace Logica
                 var buscardocente = _context.Docente.Find(docente.Identificacion);
                 if (buscardocente == null)
                 {
+                    docente.Tipo = "Docente";
+                    docente.Estado = "Activo";
                     _context.Docente.Add(docente);
                     _context.SaveChanges();
-                    return new GuardardocenteResponse(docente);
+                    return new GuardarDocenteResponse(docente);
                 }
                 else
                 {
-                    return new GuardardocenteResponse("Duplicado");
+                    return new GuardarDocenteResponse("Duplicado");
                 }
             }
             catch (Exception e)
             {
-                return new GuardardocenteResponse($"Error en la aplicacion: {e.Message}");
+                return new GuardarDocenteResponse($"Error en la aplicacion: {e.Message}");
             }
         }
 
@@ -55,7 +57,7 @@ namespace Logica
             }
             public bool Error { get; set; }
             public string Mensaje { get; set; }
-            public Docente docente { get; set; }
+            public Docente Docente { get; set; }
         }
     }
 }

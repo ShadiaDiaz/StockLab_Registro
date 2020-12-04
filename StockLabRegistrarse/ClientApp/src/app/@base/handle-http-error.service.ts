@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, of } from 'rxjs';
+import { AlertModalComponent } from './modal/alert-modal/alert-modal.component';
 @Injectable({
   providedIn: 'root'
 })
